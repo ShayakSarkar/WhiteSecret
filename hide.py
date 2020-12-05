@@ -25,7 +25,7 @@ def create_output_file(container_file,output_file,bin_msg,bits_per_line):
         line=line.strip()
         for i in range(bits_per_line):
             if((current_index+i)>=len(bin_msg)):
-                return
+                break
             char=bin_msg[current_index+i]
             #print(char,end="")
             if(char=='0'):
@@ -38,7 +38,7 @@ def create_output_file(container_file,output_file,bin_msg,bits_per_line):
     
     line=container_file.readline()
     while(line!=""):
-        output_file.writelines([line,'\n'])
+        output_file.writelines([line.strip(),'\n'])
         line=container_file.readline()
     
 
