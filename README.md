@@ -1,4 +1,4 @@
-# WhiteSpaceSteg
+# WhiteSecret
 Secret messages can be put inside a text file
 
 ## Usage
