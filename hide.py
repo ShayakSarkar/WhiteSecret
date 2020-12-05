@@ -35,6 +35,12 @@ def create_output_file(container_file,output_file,bin_msg,bits_per_line):
         current_index+=bits_per_line
         output_file.writelines([line,'\n'])
         #print()
+    
+    line=container_file.readline()
+    while(line!=""):
+        output_file.writelines([line,'\n'])
+        line=container_file.readline()
+    
 
 def print_bin_message(msg):
     temp=[msg[i*8:i*8+8] for i in range(len(msg)//8)]
